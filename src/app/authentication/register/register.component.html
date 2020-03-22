@@ -1,0 +1,66 @@
+<!-- <div class="row mt-4">
+    <div class="col-12">
+        <h4>Register</h4>
+    </div>
+</div> -->
+
+<div>
+    <div class="row" *ngIf="authError">
+        <div class="col-12 alert alert-danger">
+            {{ authError?.message}}
+        </div>
+    </div>
+    <div class="page-wrapper bg-dark p-t-100 p-b-50">
+        <div class="wrapper wrapper--w900">
+            <div class="card card-6">
+                <div class="card-heading">
+                    <h2 class="title">Kindly Fill Your Details</h2>
+                </div>
+                <div class="card-body">
+                    <form #userRegForm="ngForm" (ngSubmit)="createUser(userRegForm)">
+                        <div class="form-row">
+                            <div for="firstName" class="name">First name</div>
+                            <div class="value">
+                                <input ngModel #firstname="ngModel" class="input--style-6" type="text" name="firstName" id="firstName">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div for="lastName" class="name">Last name</div>
+                            <div class="value">
+                                <input ngModel #lastname="ngModel" class="input--style-6" type="text" name="lastName" id="lastName">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Phone</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-6" type="tel" name="tel" id="tel" placeholder="+628XXXXXXXXXX">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Email address</div>
+                            <div class="value">
+                                <div for="email" class="input-group">
+                                    <input ngModel #email="ngModel" class="input--style-6" type="email" name="email" id="email" placeholder="example@email.com">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div for="password" class="name">Password</div>
+                            <div class="value">
+                                <div class="input-group" id="add_text">
+                                    <input ngModel #password="ngModel" class="input--style-6" type="password" name="password" placeholder="Password must at least contain 6 characters " id="edu">
+                                </div>
+                            </div>
+                            <!-- <img src="plus.jpg" style="position:relative;TOP:-51px;margin-left: 101%;width:30px;height:30px;" id="add"> -->
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn--radius-2 btn--blue-2" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

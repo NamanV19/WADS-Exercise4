@@ -1,0 +1,6 @@
+<p *ngIf="user">Welcome, {{ user?.displayName }}</p>
+
+<button class="btn btn-primary mr-2" *ngIf="!user" (click)="register()">Register</button>
+<button class="btn btn-primary" *ngIf="user" (click)="logout()">Logout</button>
+<button class="btn btn-primary" *ngIf="!user" (click)="login()">Login</button>
+
